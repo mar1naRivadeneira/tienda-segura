@@ -11,4 +11,8 @@ app.get("/calcular", (req, res) => {
   res.json({ resultado });
 });
 
+app.get("/", (req, res) => res.send("Tienda segura"));
+
+if (require.main === module) app.listen(3000);
+
 module.exports = { app, total };
